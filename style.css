@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+
+
+/* ===========Formatação do Header=============== */
+header {
+  /* border: 3px solid #ffff00; */
+  display: flex;
+  justify-content: space-around;
+}
+
+header h1 {
+  /* border: 3px solid #ffff00; */
+  font-size: 5vh;
+  margin-top: 0.5vh;
+}
+
+.logo {
+  /* border: 3px solid #ffff00; */
+  margin-top: 2vh;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.logo div {
+  /* border: 3px solid #ffff00; */
+  margin-left: 2vh;
+  background-repeat: no-repeat;
+  background-size: 8vh 7vh;
+  display: flex;
+  width: 100px;
+  background-image: url(./imagens/LogoNegativa.png);
+}
+
+/* ===============Conclusão do Header=============== */
+
+
+
+
+/* ------Menu Hamburguer------ */
+
+
+
+/* O elemento #menu tem um índice z de 2, o que significa que ele vai ficar em cima de todos os outros elementos */
+#menu {
+  z-index: 2;
+}
+
+/* O elemento #menu-bar é o botão do menu hamburguer. Ele tem uma largura de 190% e uma altura de 15% em relação ao seu pai */
+#menu-bar {
+  width: 140%;
+  height: 5dvh;
+  margin: 30px 0 20px 20px;
+  /* O cursor do mouse muda para uma mãozinha quando passa por cima do botão */
+  cursor: pointer;
+}
+
+/* As barras são os elementos que compoem o menu hamburguer. Elas têm uma altura de 5px e uma largura de 100%. Elas também têm uma borda arredondada e uma transição suave */
+.bar {
+  height: 1vh;
+  width: 5.5vh;
+  color: #ffffff;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+/* A barra 1 tem uma transformação de translação vertical de -4px */
+#bar1 {
+  transform: translateY(-4px);
+}
+
+/* A barra 3 tem uma transformação de translação vertical de 4px */
+#bar3 {
+  transform: translateY(4px);
+}
+
+/* O elemento .nav é o menu em si. Ele tem uma transição suave e começa escondido */
+.nav {
+
+  display: none;
+}
+
+/* A lista do menu tem um background color de #ecb65994 e uma borda arredondada */
+.nav ul {
+  background-color: #2a2a2aac;
+  margin-left: 15px;
+  border-radius: 8px;
+  padding: 0 22px;
+}
+
+/* Cada item da lista tem um estilo de lista none e um padding de 12px na vertical */
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+/* Cada link do menu tem um estilo de texto branco e um tamanho de fonte de 20px */
+.nav li a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav li button {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Quando o mouse passa por cima do link, o estilo de texto muda para negrito */
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.nav li button:hover{
+  font-weight: bold;
+
+}
+
+/* O elemento .menu-bg é o background do menu. Ele tem uma posição absoluta e começa com uma largura e altura de 0 */
+.menu-bg,
+#menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* O background do menu tem uma borda arredondada e uma transição suave */
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(square, #DC052D, #DC052D);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+/* Quando o menu é aberto, o estilo de .change é aplicado */
+.change {
+  display: block;
+}
+
+/* Quando o menu é aberto, as barras mudam de cor para branco */
+.change .bar {
+  background-color: white;
+}
+
+/* O estilo de .change-bg é aplicado quando o menu é aberto. Ele muda a largura e altura do background do menu */
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%, -30%);
+}
+
+/* ================Conclusao Menu Hamburguer=============== */
+
+
+
+
+
+/* ===============CSS PÁGINA PRINCIPAL================ */
+.conteudo {
+  /* border: 3px solid #ffff00; */
+  background-color: #000000;
+  margin-top: 0;
+  /* margin: 14dvh 14vh 14dvh 14vh; */
+  padding: 8.9%;
+  display: flex;
+  margin-left: 13%;
+}
+
+
+.conteudo .imagem {
+  /* border: 3px solid #ffff00; */
+  background-image: url(./imagens/LOGO-PRIMÁRIA-AMARELO-PNG.png);
+  width: 50vh;
+  background-size: 45vh;
+  background-repeat: no-repeat;
+}
+
+.tematica {
+  color: #ffffff;
+  background-color: #ecb65900;
+  border-radius: 8px;
+  border: none;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+}
+
+button{
+   cursor: pointer;
+}
+.conteudo div {
+  /* border: 3px solid #ffff00; */
+  background-color: #000000;
+}
+
+.conteudo div h2 {
+  font-size: 6vh;
+  /* Tamanho da fonte do h1 */
+}
+
+.conteudo div p {
+  font-size: 3vh;
+  margin-right: 37px;
+  margin-top: 40px;
+}
+
+.conteudo button {
+  background-color: #FAAF29;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  padding: 3%;
+  margin-top: 5dvh;
+  text-align: center;
+  font-size: 3vh;
+  cursor: pointer;
+  border: 2px solid #000000;
+}
+
+.conteudo button:hover {
+  box-shadow: 0 4px 8px 0 #414040, 0 3px 10px 0 #d4992cf6;
+}
+
+.icone {
+  border: 3px solid #ffff00;
+  width: 100px;
+  height: 100px;
+}
+
+/* ==========Conclusao css pagina principal========== */
+
+
+
+
+/* -------Modo Escuro------- */
+.dark-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode header .logo {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .logo div {
+  background-repeat: no-repeat;
+  background-size: 8vh 7vh;
+  display: flex;
+  width: 100px;
+  background-image: url(./imagens/LogoPositiva.png);
+}
+
+.dark-mode .bar {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .conteudo div {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .conteudo {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .conteudo .imagem {
+
+  margin-top: 9%;
+  border: 3px solid white;
+  background-image: url(./imagens/LogoBrancaPrim.png);
+  width: 70%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.dark-mode .img-cabelo {
+  border: 3px solid #07ff45;
+  background-image: url(./imagens/CabeloModoClaro.png);
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  padding: 30%;
+  background-repeat: no-repeat;
+}
+
+.dark-mode .img-combo {
+  border: 3px solid #07ff45;
+  background-image: url(./imagens/ComboModoClaro.png);
+  width: 140%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+@media(max-width: 768px) {
+
+
+
+  /* =========Responsividade do header========== */
+  header {
+    padding: 20px;
+  }
+
+  .logo {
+    margin-top: 1vh;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+
+  .logo div {
+    margin-left: 2vh;
+    background-repeat: no-repeat;
+    background-size: 8vh 7vh;
+    display: flex;
+    width: 18%;
+    background-image: url(./imagens/LogoNegativa.png);
+  }
+
+  .logo h1 {
+    margin: 2vh 0vh 3vh 0vh;
+    padding: 0;
+    font-size: 3vh;
+    color: #ffffff;
+  }
+
+
+  .dark-mode .logo {
+    margin-top: 1vh;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+
+  .dark-mode .logo div {
+    margin-left: 2vh;
+    background-repeat: no-repeat;
+    background-size: 8vh 7vh;
+    display: flex;
+    width: 18%;
+    background-image: url(./imagens/LogoPositiva.png);
+  }
+
+  .dark-mode .logo h1 {
+    margin: 2vh 0vh 3vh 0vh;
+    padding: 0;
+    font-size: 3vh;
+    color: #000000;
+  }
+
+  /* =========Conclusão da Responsividade do header========== */
+
+
+
+  /* ===========Responsividade do Menu Hamburguer=========== */
+  #menu-bar {
+    width: 140%;
+    height: 5dvh;
+    margin: 40px 0px 20px 20px;
+    /* O cursor do mouse muda para uma mãozinha quando passa por cima do botão */
+    cursor: pointer;
+  }
+
+  .bar {
+    height: 1vh;
+    width: 5.5vh;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 5px;
+    transition: 0.5s ease;
+  }
+
+  /* ===========Responsividade do Menu Hamburguer=========== */
+
+
+
+  /* ===========Responsividade da página principal=========== */
+   .conteudo {
+    /* border: 3px solid #6bfd11; */
+    flex-direction: column-reverse;
+    margin-left: 4%;
+    margin-top: 15dvh;
+
+    padding: 0;
+  }
+
+  .conteudo .imagem {
+    margin-top: 18%;
+    border: 3px solid #6bfd11;
+    /* margin-top: 18%; */
+    background-image: url(./imagens/LOGO-PRIMÁRIA-AMARELO-PNG.png);
+    width: 100%;
+    background-size: 100%;
+  }
+
+  .conteudo div {
+    padding: 2vh;
+    border: 3px solid #00000000;
+    background-color: #00000000;
+  }
+
+  .conteudo div h2 {
+    font-size: 3vh;
+    /* Tamanho da fonte do h1 */
+  }
+
+  .conteudo div p {
+    font-size: 2.6vh;
+    /* margin-right: 20px; */
+    /* margin-top: 2vh; */
+  }
+
+  .conteudo button {
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+    /* margin-top: 2dvh; */
+    text-align: center;
+    font-size: 2.4vh;
+
+  }
+
+  .dark-mode .conteudo .imagem {
+    /* margin-top: 18%; */
+    background-image: url(./imagens/LOGO-PRIMÁRIA-AMARELO-PNG.png);
+    /* width: 100%; */
+    background-size: 100%;
+  }
+
+
+  .dark-mode .conteudo button:hover {
+    box-shadow: 0 0px 16px 0 #414040;
+  }
+
+  /* ===========Conclusão da Responsividade da primeira section=========== */
+
+}
